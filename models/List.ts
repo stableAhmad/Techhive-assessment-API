@@ -50,13 +50,12 @@ async function postList(list: customList): Promise<boolean> {
 }
 
 async function deleteList(listId: string): Promise<void> {
-     await prisma.element.deleteMany({
+     await prisma.list.delete({
           where: {
                id: listId,
           },
      });
-
-     await prisma.list.delete({
+     await prisma.element.deleteMany({
           where: {
                id: listId,
           },

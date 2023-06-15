@@ -45,12 +45,12 @@ function postList(list) {
 exports.postList = postList;
 function deleteList(listId) {
     return __awaiter(this, void 0, void 0, function* () {
-        yield prisma.element.deleteMany({
+        yield prisma.list.delete({
             where: {
                 id: listId,
             },
         });
-        yield prisma.list.delete({
+        yield prisma.element.deleteMany({
             where: {
                 id: listId,
             },
