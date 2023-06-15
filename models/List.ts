@@ -63,7 +63,7 @@ async function deleteList(listId: string): Promise<void> {
      });
 }
 
-async function postElement(element: customElement): Promise<Boolean> {
+async function postElement(element: customElement): Promise<String> {
      const newElement = await prisma.element.create({
           data: {
                due_date: new Date(element.due_date),
@@ -82,9 +82,9 @@ async function postElement(element: customElement): Promise<Boolean> {
      });
 
      if (!newElement) {
-          return false;
+          return "";
      }
-     return true;
+     return newElement.id;
 }
 async function deleteElement(id: string): Promise<void> {
      await prisma.element.delete({

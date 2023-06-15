@@ -76,9 +76,9 @@ function postElement(element) {
             },
         });
         if (!newElement) {
-            return false;
+            return "";
         }
-        return true;
+        return newElement.id;
     });
 }
 exports.postElement = postElement;
