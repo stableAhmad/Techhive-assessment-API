@@ -69,9 +69,10 @@ function postElement(element) {
                 description: element.description,
                 list: {
                     connect: {
-                        id: element.list_id,
+                        id: element.ListId,
                     },
                 },
+                ListId: element.ListId,
                 state: element.state,
             },
         });
