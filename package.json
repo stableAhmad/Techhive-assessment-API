@@ -4,7 +4,6 @@
      "description": "",
      "main": "index.js",
      "scripts": {
-          "build": " rimraf dist && tsc -w",
           "start": "nodemon dist/index.js",
           "dev": "concurrently  \"rimraf dist tsc -w\"  \"nodemon dist/index.js\" "
      },
