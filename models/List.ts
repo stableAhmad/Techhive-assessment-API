@@ -13,7 +13,7 @@ type customElement = {
      title: string;
      priority: number;
      description: string;
-     list_id: string;
+     ListId: string;
      state: boolean;
 };
 
@@ -72,9 +72,10 @@ async function postElement(element: customElement): Promise<Boolean> {
                description: element.description,
                list: {
                     connect: {
-                         id: element.list_id,
+                         id: element.ListId,
                     },
                },
+               ListId: element.ListId,
                state: element.state,
           },
      });
