@@ -76,7 +76,7 @@ async function postElement(element: customElement): Promise<Boolean> {
                          id: element.ListId,
                     },
                },
-               ListId: element.ListId,
+
                state: element.state,
           },
      });

@@ -72,7 +72,6 @@ function postElement(element) {
                         id: element.ListId,
                     },
                 },
-                ListId: element.ListId,
                 state: element.state,
             },
         });
