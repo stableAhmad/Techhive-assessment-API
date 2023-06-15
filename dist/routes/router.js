@@ -19,7 +19,7 @@ const listRouter = express_1.default.Router();
 exports.listRouter = listRouter;
 listRouter.get("/get/:userId", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const lists = yield (0, List_1.getLists)(req.params.userId);
-    return lists;
+    res.send(lists);
 }));
 listRouter.post("/post", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const result = yield (0, List_1.postList)(req.body);

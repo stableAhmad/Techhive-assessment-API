@@ -14,7 +14,7 @@ const listRouter: Router = express.Router();
 
 listRouter.get("/get/:userId", async (req: Request, res: Response) => {
      const lists = await getLists(req.params.userId);
-     return lists;
+     res.send(lists);
 });
 
 listRouter.post("/post", async (req: Request, res: Response) => {
