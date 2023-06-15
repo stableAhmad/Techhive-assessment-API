@@ -33,7 +33,7 @@ function postList(list) {
             data: {
                 title: list.title,
                 date: new Date(list.date),
-                userID: list.userId,
+                userID: list.userID,
             },
         });
         if (!newList) {

@@ -4,7 +4,7 @@ type customList = {
      title: string;
      description: string;
      date: Date; //json date format "2023-06-14T12:00:00Z" , new Date(customList.date)
-     userId: string;
+     userID: string;
 };
 
 type customElement = {
@@ -38,7 +38,7 @@ async function postList(list: customList): Promise<boolean> {
           data: {
                title: list.title,
                date: new Date(list.date),
-               userID: list.userId,
+               userID: list.userID,
           },
      });
 
